@@ -39,3 +39,8 @@ Step 11: Run the code
   IMPORTANT NOTE: The first pop up window will prompt you to select the file you'd like to analyze. The second pop up window will ask you to select the folder you'd like the resulting csv to be saved to 
 Step 12: Your results will be saved in the folder you selected as 'Results'. 
   IMPORTANT NOTE: Make sure to go in and rename your results before running the next test or previous results will be written over. 
+  
+  
+  
+  
+Sample images are provided in the labeled folder. This folder contains two example immunofluorescent images (ATP synthase = green, TOM20 = red) from mouse primary cortical neurons, one z-stack of immunofluorescent signal (ATP synthase) from mouse hippocampal tissue, and one z-stack of SBF-SEM images from rat hippocampal tissue. Z-stacks have been downsized and compressed from original parameters to limit file size. Original z-stack images are available in the corresponding folders labeled with the suffix "Unstacked."
