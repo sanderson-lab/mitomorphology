@@ -1,11 +1,11 @@
 #First Pop up: Select the Data you'd like to analyze
 #Second Pop Up: Select the Folder you'd like to store
 
-#Experimental Columns of Interest; Select the Columns you'd like to analyze
+#Experimental Columns of Interest; Select the Columns you'd like to analyze; must be same as columns defined during training, minus the VC
 ExperimentColumns = (2:21)
 
 #Select model for classificaiton
-Model = RFTest
+Model = type_model_name_here
 
 #-------------------------------------------------------------------------------------------------------------------------------------
 

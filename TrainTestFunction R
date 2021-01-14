@@ -2,19 +2,19 @@
 # Libraries needed: 'Caret' 'factoextra' and 'Random Forest'
 
 #Enter in Column Selection where ':' indicates 'through' in the example here 2:22 reads as 'column 2 through column 22'
-Columns = (2:22)
+Columns = (2:22) #must include VC
 
 #Set 'VC' equal to the column number for the variable of interest
 VC = 22
 
 #Set the desired name for the model to be trained, use '' to define as a string
-Model = 'RFTest'
+Model = 'type_model_name_here'
 
 # Select types of analysis needed; TRUE = Yes, run this test; FALSE = No, don't run this test. Type TRUE or FALSE in all caps, or code won't run
 ConfusionMatrix <- TRUE
 TestAccuracy <- TRUE
 VariableImportance <- TRUE
-PCA <- TRUE 
+PCA <- TRUE
 
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ library(caret)
 FileName <- rstudioapi::selectFile(caption = "Select CSV File",
                                    filter = "CSV Files (*.csv)",
                                    existing = TRUE)
-#Open and randomize File
+#Open File
 DataFile <- read.csv(FileName)
 set.seed(123)
 names(DataFile)[VC] <- "Variable"
@@ -45,12 +45,12 @@ assign(Model, RandomForest)
 
 #Test Accuracy
 if (TestAccuracy == TRUE) {
-  Model
+  RandomForest
 } else { 
   print("Test Accuracy: NA")
   }
 
-predict <- predict(Model, testset[c(Columns)])
+predict <- predict(RandomForest, testset[c(Columns)])
 
 #Confusion Matrix
 if (ConfusionMatrix == TRUE) {
@@ -76,14 +76,3 @@ if (PCA == TRUE) {
 } else  {
   print("PCA: NA")
   }
-
-
-
-
-
-
-
-
-
-
-
